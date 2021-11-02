@@ -2,10 +2,10 @@ import React, {useState, useEffect} from 'react';
 import Product from './Product';
 import axios from 'axios';
 
-const ProductList = ({setInputValue}) => {
+const ProductList = ({search}) => {
     
     //const API = 'https://api.mercadolibre.com/sites/MLA/search?q=celular&limit=40';
-    const API = `https://api.mercadolibre.com/sites/MLA/search?q=${setInputValue}&limit=40`;
+    const API = `https://api.mercadolibre.com/sites/MLA/search?q=${search}&limit=40`;
 
     //State de la peticion a la API de MercadoLibre
     const [products, setProducts] = useState([]);
@@ -29,6 +29,7 @@ const ProductList = ({setInputValue}) => {
                                 image={product.thumbnail}
                                 name={product.title}
                                 price={product.price}
+                                discount={product.original_price}
                            />
                 })
             }

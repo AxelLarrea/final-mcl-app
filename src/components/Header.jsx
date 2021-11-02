@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
-import ProductList from './ProductList';
 import lupa from '../assets/icons/search.png'
 
-const Header = () => {
+const Header = ({setSearch}) => {
 
     //State del input
     const [inputValue, setInputValue] = useState('')
@@ -15,7 +14,8 @@ const Header = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        if(inputValue.trim().length > 2) {
+        if(inputValue.trim().length > 1) {
+            setSearch(inputValue)
             setInputValue('')
         }
     }
@@ -28,7 +28,7 @@ const Header = () => {
                         <a href="/"><img src="https://http2.mlstatic.com/frontend-assets/ui-navigation/5.16.2/mercadolibre/logo__large_plus.png" alt="logo"/></a>
                     </div>
 
-                    <form onSubtmit={handleSubmit}>
+                    <form onSubmit={handleSubmit}>
                         <div className="search-bar">
                             <input 
                                 type="text" 
@@ -45,9 +45,6 @@ const Header = () => {
                     </form>
                 </div>
             </header>
-            <ProductList
-                setInputValue={inputValue}
-            />
         </>
     );
 }

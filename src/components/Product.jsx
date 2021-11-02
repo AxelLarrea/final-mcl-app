@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Product = ({image, name, price}) => {
+const Product = ({image, name, price, discount}) => {
     return ( 
         <div className="product-show">
             <div className="product-container">
@@ -10,6 +10,7 @@ const Product = ({image, name, price}) => {
                 
                 <div className="item-info">
                     <h2>{name}</h2>
+                    {discount ? <s><span>${discount}</span></s>: <></>}
                     <h2>${price}</h2>
                 </div>
             </div>

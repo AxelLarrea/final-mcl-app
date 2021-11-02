@@ -30,7 +30,7 @@ body{
 
 .search-bar input {
     height: 30px;
-    width: 300px;
+    width: 700px;
     outline: none;
     border: 1px solid gainsboro;
     border-radius: 3px;    
@@ -68,9 +68,6 @@ body{
 }
 
 .product-show {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 100%;
     margin: auto;
     border-bottom: 1px solid gainsboro;
@@ -85,15 +82,26 @@ body{
     background-color: #fff;
     padding: 10px 0px;
     border-radius: 2px;
+    font-size: 13px;
+    font-weight: 300;
 }
 
 .image-container {
     padding: 0px 10px;
     width: 120px;
     height: 120px;
+    margin-right: 25px;
 }
 
 .image-container img { 
     width: 100%;
     height: 100%;
+}
+
+.item-info {
+    height: 120px;
+}
+
+.item-info h2 {
+    margin-top: 0;
 }
