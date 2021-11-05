@@ -4,7 +4,6 @@ import axios from 'axios';
 
 const ProductList = ({search}) => {
     
-    //const API = 'https://api.mercadolibre.com/sites/MLA/search?q=celular&limit=40';
     const API = `https://api.mercadolibre.com/sites/MLA/search?q=${search}&limit=40`;
 
     //State de la peticion a la API de MercadoLibre
@@ -18,6 +17,8 @@ const ProductList = ({search}) => {
         })()
     }, [API]);
 
+
+
     console.log(products);
 
     return (
@@ -25,11 +26,8 @@ const ProductList = ({search}) => {
             {
                 products.map(product => {
                     return <Product
+                                product_obj={product}
                                 key={product.id}
-                                image={product.thumbnail}
-                                name={product.title}
-                                price={product.price}
-                                discount={product.original_price}
                            />
                 })
             }

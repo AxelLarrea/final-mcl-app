@@ -13,7 +13,7 @@ const Header = ({setSearch}) => {
     // funcion del submit cuando haga enter del Form
     const handleSubmit = (e) => {
         e.preventDefault();
-
+        
         if(inputValue.trim().length > 1) {
             setSearch(inputValue)
             setInputValue('')
@@ -27,7 +27,7 @@ const Header = ({setSearch}) => {
                     <div className="logo">
                         <a href="/"><img src="https://http2.mlstatic.com/frontend-assets/ui-navigation/5.16.2/mercadolibre/logo__large_plus.png" alt="logo"/></a>
                     </div>
-
+                    
                     <form onSubmit={handleSubmit}>
                         <div className="search-bar">
                             <input 
