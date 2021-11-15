@@ -17,8 +17,8 @@ const Product = ({product_obj}) => {
                     
                     <div className="item-info">
                         <h2>{title}</h2>
-                        {original_price ? <s><span>{original_price}</span></s>: <></>}
-                        <h2>{price}</h2>
+                        {original_price ? <s><span>${original_price}</span></s>: <></>}
+                        <h2>${price}</h2>
                     </div>
                 </div>
             </div>
