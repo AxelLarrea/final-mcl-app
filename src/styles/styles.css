@@ -130,7 +130,7 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0 10px 0 20px;
     height: 400px;
 }
 
@@ -203,3 +203,14 @@ a {
 
 /* Error 404 */
 
+.error-container {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.error-container h1 {
+    font-size: 70px;
+}
