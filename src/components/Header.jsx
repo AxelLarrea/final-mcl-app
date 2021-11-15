@@ -25,10 +25,6 @@ const Header = () => {
     }
 
 
-    console.log(inputValue);
-    let final_url = url + inputValue;
-
-
     return (
         <>
             <header className="header">
@@ -49,7 +45,7 @@ const Header = () => {
                                 minLength="1"
                             />
 
-                            <Link to={final_url}>
+                            <Link to={`${url}${inputValue}`}>
                                 <button type="submit">
                                     <img src={lupa} alt="lupa"/>
                                 </button>
