@@ -1,16 +1,17 @@
 import React from 'react';
 import Header from '../components/Header';
 import ProductList from '../components/ProductList';
+import Error404 from '../components/Error404';
 import { useParams } from 'react-router-dom';
 
 const SearchPage = () => {
 
-    const params = useParams();
+    const {query} = useParams();
 
     return (
         <>
             <Header/>
-            <ProductList search={`${params.query}`} />
+            {query === undefined || query.length === 1 ? <Error404/> : <ProductList search={query}/>}
         </>
     );
 }

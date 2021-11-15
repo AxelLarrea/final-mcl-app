@@ -10,9 +10,10 @@ const App = () => {
         <BrowserRouter>
             <Layout>
                 <Switch>
-                    <Route exact path='/' component={Home}/> 
+                    <Route exact path='/' component={Home} /> 
                     <Route path='/product-detail/:id' component={ProductDetail}/>
-                    <Route exact path='/search-page/:query' component={SearchPage}/>
+                    <Route path='/search-page/:query' component={SearchPage}/>
+                    <Route path='/' component={SearchPage}/>
                 </Switch>
             </Layout>
         </BrowserRouter>
