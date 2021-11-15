@@ -28,9 +28,10 @@ body{
     margin: auto;
 }
 
+
 .search-bar input {
     height: 30px;
-    width: 700px;
+    width: 705px;
     outline: none;
     border: 1px solid gainsboro;
     border-radius: 3px;    
@@ -193,4 +194,9 @@ a {
     font-size: 20px;
     font-weight: 400;
     text-align: justify;
+}
+
+.description-container h2{
+    color: rgb(32, 25, 25);
+    font-weight: 400;
 }

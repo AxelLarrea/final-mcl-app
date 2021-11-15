@@ -6,7 +6,7 @@ const ProductList = ({search}) => {
     
     const API = `https://api.mercadolibre.com/sites/MLA/search?q=${search}&limit=40`;
 
-    //State de la peticion a la API de MercadoLibre
+    //State para la peticion de productos a la API de MercadoLibre
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
@@ -17,9 +17,6 @@ const ProductList = ({search}) => {
         })()
     }, [API]);
 
-
-
-    console.log(products);
 
     return (
         <section className="product-list-container">

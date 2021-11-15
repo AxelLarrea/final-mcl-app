@@ -5,10 +5,10 @@ const Product = ({product_obj}) => {
 
     const {id, thumbnail, title, price, original_price} = product_obj;
 
-    const url = "/product-detail";
+    const url = "/product-detail/";
     
     return (
-        <Link to={`${url}/${id}`}>
+        <Link to={`${url}${id}`}>
             <div className="product-show">
                 <div className="product-container">
                     <div className="image-container">

@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Header from '../components/Header';
+import ItemDetail from '../components/ItemDetail';
 import {useParams} from 'react-router-dom';
 import axios from 'axios';
 
@@ -8,6 +9,8 @@ const ProductDetail = () => {
     
     //State para guardar el producto
     const [item, setItem] = useState('');
+
+    //State para guardar la descripción
     const [description, setDescription] = useState('');
 
     let params = useParams();
@@ -26,37 +29,12 @@ const ProductDetail = () => {
     }, [API, APIdes]);
 
 
-
-    const {thumbnail, pictures, price, title} = item;
-
-    console.log(item);
-    console.log(description);
-    
-
     return (
         <>
             <Header/>
-
-            <div className="detail-container">
-                <div className="image-info-container">
-                    <div className="picture-container">
-                        <img src={(pictures && pictures[0].url) || thumbnail} alt="item" />
-                    </div>
-                    <div className="info-container">
-                        <h2>{title}</h2>
-                        <div className="prices">
-                            <h2>${price}</h2>
-                            <button className="">Comprar</button>
-                        </div>
-                    </div>
-                </div>
-                <div className="description-container">
-                    <h2>Descripción</h2>
-                    <h3>{description.plain_text}</h3>
-                </div>
-            </div>
+            <ItemDetail item={item} description={description}/>
         </>
     );
 }
- 
+
 export default ProductDetail;
